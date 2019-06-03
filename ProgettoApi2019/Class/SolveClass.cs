@@ -186,6 +186,7 @@ namespace ProgettoApi2019
                     output += (" " + max + "; ");
                 }
             }
+            output = output.TrimEnd();
 
             if (String.IsNullOrEmpty(output))
                 return "none";
