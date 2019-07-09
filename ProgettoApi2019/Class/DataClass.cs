@@ -2,7 +2,7 @@ using System;
 
 namespace ProgettoApi2019
 {
-    public class DataClass
+    public static class DataClass
     {
     
         public static string GetDataOra()

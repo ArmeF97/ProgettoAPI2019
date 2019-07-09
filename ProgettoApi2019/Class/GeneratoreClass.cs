@@ -70,16 +70,16 @@ namespace ProgettoApi2019
             int choice = RandomClass.rnd.Next(0, 100);
             if (choice >= 0 && choice <= 20)
                 return GeneraAddEnt();
-            else if (choice > 20 && choice <= 60)
+            if (choice > 20 && choice <= 60)
                 return GeneraDelEnt();
-            else if (choice > 60 && choice <= 85)
+            if (choice > 60 && choice <= 85)
                 return GeneraAddRel();
-            else if (choice > 85 && choice <= 95)
+            if (choice > 85 && choice <= 95)
                 return GeneraDelRel();
-            else if (choice > 95 && choice <= 100)
+            if (choice > 95 && choice <= 100)
                 return "report";
-            else
-                throw new Exception();
+
+            throw new Exception();
         }
 
         private static string GeneraAddEnt()

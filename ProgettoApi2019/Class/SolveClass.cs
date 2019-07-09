@@ -4,7 +4,7 @@ using System.IO;
 
 namespace ProgettoApi2019
 {
-    public class SolveClass
+    public static class SolveClass
     {
 
         // a è amico di b
@@ -32,27 +32,27 @@ namespace ProgettoApi2019
 
             foreach (string s2 in s)
             {
-                if (s2.StartsWith("addrel"))
+                if (s2.StartsWith("addrel", StringComparison.Ordinal))
                 {
                     AddRel(s2);
                 }
-                else if (s2.StartsWith("addent"))
+                else if (s2.StartsWith("addent", StringComparison.Ordinal))
                 {
                     AddEnt(s2);
                 }
-                else if (s2.StartsWith("delent"))
+                else if (s2.StartsWith("delent", StringComparison.Ordinal))
                 {
                     DelEnt(s2);
                 }
-                else if (s2.StartsWith("delrel"))
+                else if (s2.StartsWith("delrel", StringComparison.Ordinal))
                 {
                     DelRel(s2);
                 }
-                else if (s2.StartsWith("report"))
+                else if (s2.StartsWith("report", StringComparison.Ordinal))
                 {
                     list.Add(Report());
                 }
-                else if (s2.StartsWith("end"))
+                else if (s2.StartsWith("end", StringComparison.Ordinal))
                 {
                     break;
                 }
@@ -70,27 +70,9 @@ namespace ProgettoApi2019
         private static void DelRel(string s2)
         {
             string[] s = s2.Split(' ');
-            if (relazioni.ContainsKey(s[3]))
+            if (relazioni.ContainsKey(s[3]) && relazioni[s[3]].ContainsKey(s[2]) && relazioni[s[3]][s[2]].Contains(s[1]))
             {
-                if (relazioni[s[3]].ContainsKey(s[2]))  
-                {
-                    if (relazioni[s[3]][s[2]].Contains(s[1]))
-                    {
-                        relazioni[s[3]][s[2]].Remove(s[1]);
-                    }
-                    else
-                    {
-                        //done
-                    }
-                }
-                else
-                {
-                    //done
-                }
-            }
-            else
-            {
-                //done
+                relazioni[s[3]][s[2]].Remove(s[1]);
             }
         }
 

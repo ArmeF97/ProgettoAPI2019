@@ -10,8 +10,11 @@ namespace ProgettoApi2019
             try{
                 Console.ReadKey();
             }
-            catch{
-                ;
+#pragma warning disable RECS0022 // A catch clause that catches System.Exception and has an empty body
+            catch
+            {
+#pragma warning restore RECS0022 // A catch clause that catches System.Exception and has an empty body
+
             }
         }
 

@@ -2,7 +2,7 @@ using System;
 
 namespace ProgettoApi2019
 {
-    public class RandomClass
+    public static class RandomClass
     {
         public static Random rnd;
 

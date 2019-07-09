@@ -3,7 +3,7 @@ using System.IO;
 
 namespace ProgettoApi2019
 {
-    public class DirectoryClass
+    public static class DirectoryClass
     {
         
         public static void CreaDirectory()
@@ -23,9 +23,11 @@ namespace ProgettoApi2019
             {
                 Directory.CreateDirectory(v);
             }
+#pragma warning disable RECS0022 // A catch clause that catches System.Exception and has an empty body
             catch
+#pragma warning restore RECS0022 // A catch clause that catches System.Exception and has an empty body
             {
-                ;
+
             }
         }
 
