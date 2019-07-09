@@ -4,9 +4,9 @@ namespace ProgettoApi2019
 {
     public static class ConsoleClass
     {
-        public static void ConsoleStampaConInterazioneUtente(string v)
+        public static void ConsoleStampaConInterazioneUtente(string v, bool interagisciFinale)
         {
-            Console.Write(v);
+            Console.WriteLine(v);
             try{
                 Console.ReadKey();
             }

@@ -34,12 +34,12 @@ namespace ProgettoApi2019
             {
                 if (args[0] == "-g")
                 {
-                    GeneratoreClass.Generatore(args);
+                    GeneratoreClass.Generatore(args, interazioneFinale);
                     return;
                 }
             }
 
-            var r = SolveClass.Solve("input.txt");
+            var r = SolveClass.Solve("input.txt", interazioneFinale);
             if (r != null)
             {
                 foreach (var r2 in r)
@@ -47,10 +47,8 @@ namespace ProgettoApi2019
                     Console.WriteLine(r2);
                 }
 
-                if (interazioneFinale)
-                {
-                    ConsoleClass.ConsoleStampaConInterazioneUtente("");
-                }
+                ConsoleClass.ConsoleStampaConInterazioneUtente("", interazioneFinale);
+
             }
         }
     }

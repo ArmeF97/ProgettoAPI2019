@@ -6,7 +6,7 @@ namespace ProgettoApi2019
 {
     public static class GeneratoreClass
     {
-        public static void Generatore(string[] args)
+        public static void Generatore(string[] args, bool interagisciFinale)
         {
             //=> syntax    .exe -g [NUM_TEST] [AVARAGE_LINES_PER_TEST]
             //=> example   .exe -g 100 150
@@ -14,7 +14,7 @@ namespace ProgettoApi2019
 
             if (args.Length < 3)
             {
-                ConsoleClass.ConsoleStampaConInterazioneUtente("Need more arguments");
+                ConsoleClass.ConsoleStampaConInterazioneUtente("Need more arguments", interagisciFinale);
                 return;
             }
 
@@ -25,10 +25,10 @@ namespace ProgettoApi2019
             int avg_lines = Convert.ToInt32(args[2]);
             for(int i=0; i< n_test; i++)
             {
-                GeneraTest(avg_lines);
+                GeneraTest(avg_lines, interagisciFinale);
             }
 
-            ConsoleClass.ConsoleStampaConInterazioneUtente(n_test + " generated.");
+            ConsoleClass.ConsoleStampaConInterazioneUtente(n_test + " generated.", interagisciFinale);
             return;
 
         }
@@ -59,7 +59,7 @@ namespace ProgettoApi2019
             return "addrel \"" + carattere1 + "\" \"" + carattere2 + "\" \"" + carattere3 + "\"";
         }
 
-        private static void GeneraTest(int avg_lines)
+        private static void GeneraTest(int avg_lines, bool interagisciFinale)
         {
             List<string> L = new List<string>();
             for (int i=0; i<avg_lines; i++)
@@ -70,7 +70,7 @@ namespace ProgettoApi2019
 
             string output_path = DirectoryClass.GetOutputPath();
             File.WriteAllLines("i/" + output_path, L);
-            var r = SolveClass.Solve("i/" + output_path);
+            var r = SolveClass.Solve("i/" + output_path, interagisciFinale);
             DirectoryClass.Save("o/" + output_path, r);
         }
 

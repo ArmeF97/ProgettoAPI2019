@@ -13,7 +13,7 @@ namespace ProgettoApi2019
         public static Dictionary<string, Dictionary<string, List<string> >> relazioni;
         public static List<string> entita;
 
-        public static List<string> Solve(string v)
+        public static List<string> Solve(string v, bool interagisciFinale)
         {
             entita = new List<string>();
             relazioni = new Dictionary<string, Dictionary<string, List<string>>>();
@@ -24,7 +24,7 @@ namespace ProgettoApi2019
             }
             catch
             {
-                ConsoleClass.ConsoleStampaConInterazioneUtente("Input file not found");
+                ConsoleClass.ConsoleStampaConInterazioneUtente("Input file not found", interagisciFinale);
                 return null;
             }
 
