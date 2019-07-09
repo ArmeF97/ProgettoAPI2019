@@ -10,10 +10,27 @@ namespace ProgettoApi2019
 
         static void Main(string[] args)
         {
-            //De-commentare questa linea per forzare la generazione di test
-            //args = new string[] { "-g", "1", "500000"};
+            if (args.Length > 0)
+            {
+                Main2(args, true);
+                return;
+            }
 
-            if (args.Length>0)
+            //De-commentare questa linea per forzare la generazione di test
+            for (int i = 0; i < 10; i++)
+            {
+                int n = GeneratoreClass.GeneraNumeroTest() + i;
+
+                int righe = GeneratoreClass.GeneraRighe() + i;
+
+                args = new string[] { "-g", n.ToString(), righe.ToString() };
+                Main2(args, false);
+            }
+        }
+
+        private static void Main2(string[] args, bool interazioneFinale)
+        {
+            if (args.Length > 0)
             {
                 if (args[0] == "-g")
                 {
@@ -25,20 +42,16 @@ namespace ProgettoApi2019
             var r = SolveClass.Solve("input.txt");
             if (r != null)
             {
-                foreach(var r2 in r)
+                foreach (var r2 in r)
                 {
                     Console.WriteLine(r2);
                 }
 
-                ConsoleClass.ConsoleStampaConInterazioneUtente("");
+                if (interazioneFinale)
+                {
+                    ConsoleClass.ConsoleStampaConInterazioneUtente("");
+                }
             }
         }
-
-
-        
-
-        
-
-
     }
 }

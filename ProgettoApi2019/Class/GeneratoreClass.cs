@@ -33,6 +33,15 @@ namespace ProgettoApi2019
 
         }
 
+        internal static int GeneraNumeroTest()
+        {
+            return RandomClass.RandomInt(10,100);
+        }
+
+        internal static int GeneraRighe()
+        {
+            return RandomClass.RandomInt(100, 200) * RandomClass.RandomInt(1,4) * RandomClass.RandomInt(100,200) * RandomClass.RandomInt(2,5);
+        }
 
         private static string GeneraDelRel()
         {

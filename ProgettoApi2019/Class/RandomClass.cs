@@ -21,5 +21,13 @@ namespace ProgettoApi2019
             char carattere = (char)lettera;
             return carattere;
         }
+
+        internal static int RandomInt(int v1, int v2)
+        {
+            if (rnd == null)
+                rnd = new Random();
+
+            return rnd.Next(v1, v2);
+        }
     }
 }
