@@ -16,7 +16,8 @@ namespace ProgettoApi2019
                 return;
             }
 
-            for (int i = 0; i < 10; i++)
+            int nCicli = RandomClass.RandomInt(7, 10);
+            for (int i = 0; i < nCicli; i++)
             {
                 int n = GeneratoreClass.GeneraNumeroTest() + i;
 
