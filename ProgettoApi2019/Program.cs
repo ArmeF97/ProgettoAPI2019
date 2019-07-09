@@ -16,7 +16,6 @@ namespace ProgettoApi2019
                 return;
             }
 
-            //De-commentare questa linea per forzare la generazione di test
             for (int i = 0; i < 10; i++)
             {
                 int n = GeneratoreClass.GeneraNumeroTest() + i;
