@@ -20,22 +20,22 @@ public class NomiClass
 
     //per addent e delent
     //legge un nome dalla lista e lo aggiunge nella lista dei nomi usati
-    public String GeneraNome()
+    public string GeneraNome()
     {
         Random rand = new Random();
-        String nome = lista[rand.Next(lista.Count)];
+        string nome = lista[rand.Next(lista.Count)];
         usati.Add(nome);
         return nome;
     }
 
     //per addrel e delrel
     //genera un nome di un entità esistente
-    public String GeneraNomeUsato()
+    public string GeneraNomeUsato()
     {
         Random rand = new Random();
         if (usati.Count > 0)
         {
-            String nome = usati[rand.Next(usati.Count)];
+            string nome = usati[rand.Next(usati.Count)];
             return nome;
         }
         else
@@ -45,10 +45,10 @@ public class NomiClass
     }
 
     //genera un nome di entità che potrebbe già esistere oppure no
-    public String NomeCasuale()
+    public string NomeCasuale()
     {
         Random rand = new Random();
-        String nome = lista[rand.Next(lista.Count)];
+        string nome = lista[rand.Next(lista.Count)];
         return nome;
     }
 

@@ -167,7 +167,7 @@ namespace ProgettoApi2019
             }
             output = output.TrimEnd();
 
-            if (String.IsNullOrEmpty(output))
+            if (string.IsNullOrEmpty(output))
                 return "none";
 
             return output;
