@@ -4,11 +4,9 @@ using System.IO;
 
 namespace ProgettoApi2019
 {
-    class Program
+    internal class Program
     {
-
-
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             if (args.Length > 0)
             {
@@ -23,7 +21,7 @@ namespace ProgettoApi2019
 
                 int righe = GeneratoreClass.GeneraRighe() + i;
 
-                args = new string[] { "-g", n.ToString(), righe.ToString() };
+                args = new string[] { "-g", n.ToString(), righe.ToString(), "Y" };
                 Main2(args, false);
             }
         }
@@ -48,7 +46,6 @@ namespace ProgettoApi2019
                 }
 
                 ConsoleClass.ConsoleStampaConInterazioneUtente("", interazioneFinale);
-
             }
         }
     }
