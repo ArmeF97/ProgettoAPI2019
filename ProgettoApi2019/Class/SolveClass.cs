@@ -17,7 +17,7 @@ namespace ProgettoApi2019
         {
             entita = new List<string>();
             relazioni = new Dictionary<string, Dictionary<string, List<string>>>();
-            string[] s = null;
+            string[] s;
             try
             {
                 s = File.ReadAllLines(v);

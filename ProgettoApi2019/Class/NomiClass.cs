@@ -4,8 +4,8 @@ using System.IO;
 
 public class NomiClass
 {
-    private List<string> lista;
-    private List<string> usati;
+    private readonly List<string> lista;
+    private readonly List<string> usati;
 
     //inizializza generatore di nomi
     //file di testo: ProgettoAPI2019/bin/debug/netcoreapp2.0/Nomi.txt
