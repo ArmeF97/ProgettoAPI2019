@@ -13,7 +13,7 @@ namespace ProgettoApi2019
             char carattere = (char)lettera;
             return carattere;
         }
-        
+
         public static char RandomLetteraRelazione()
         {
             int lettera = rnd.Next(0, 5);

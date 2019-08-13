@@ -54,7 +54,7 @@ namespace ProgettoApi2019
                 return "delrel \"" + carattere1 + "\" \"" + carattere2 + "\" \"" + carattere3 + "\"";
             }
 
-            String nome1, nome2;
+            string nome1, nome2;
             int n1, n2;
             Random rand = new Random();
             n1 = rand.Next(11);
@@ -90,7 +90,7 @@ namespace ProgettoApi2019
                 return "addrel \"" + carattere1 + "\" \"" + carattere2 + "\" \"" + carattere3 + "\"";
             }
 
-            String nome1, nome2;
+            string nome1, nome2;
             int n1, n2;
             Random rand = new Random();
             n1 = rand.Next(11);

@@ -18,10 +18,8 @@ namespace ProgettoApi2019
                 catch
                 {
 #pragma warning restore RECS0022 // A catch clause that catches System.Exception and has an empty body
-
                 }
             }
         }
-
     }
 }

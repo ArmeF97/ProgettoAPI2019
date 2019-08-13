@@ -6,11 +6,11 @@ namespace ProgettoApi2019
 {
     public static class SolveClass
     {
-
         // a è amico di b
 
-                                //amico_di          //b       //lista di a
-        public static Dictionary<string, Dictionary<string, List<string> >> relazioni;
+        //                      amico_di            //b       //lista di a
+        public static Dictionary<string, Dictionary<string, List<string>>> relazioni;
+
         public static List<string> entita;
 
         public static List<string> Solve(string v, bool interagisciFinale)
@@ -65,8 +65,6 @@ namespace ProgettoApi2019
             return list;
         }
 
-
-
         private static void DelRel(string s2)
         {
             string[] s = s2.Split(' ');
@@ -83,7 +81,7 @@ namespace ProgettoApi2019
             {
                 relazioni[x].Remove(s[1]);
 
-                foreach(var x2 in relazioni[x].Keys)
+                foreach (var x2 in relazioni[x].Keys)
                 {
                     relazioni[x][x2].Remove(s[1]);
                 }
@@ -124,7 +122,6 @@ namespace ProgettoApi2019
             }
         }
 
-
         private static string Report()
         {
             string output = "";
@@ -143,7 +140,7 @@ namespace ProgettoApi2019
 
                 foreach (var x2 in relazioni[x].Keys)
                 {
-                    if (relazioni[x][x2].Count>max)
+                    if (relazioni[x][x2].Count > max)
                     {
                         max = relazioni[x][x2].Count;
                         champions.Clear();
@@ -175,6 +172,5 @@ namespace ProgettoApi2019
 
             return output;
         }
-
     }
 }

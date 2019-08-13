@@ -4,7 +4,6 @@ namespace ProgettoApi2019
 {
     public static class DataClass
     {
-    
         public static string GetDataOra()
         {
             return DateTime.Now.Year + "_" + DateTime.Now.Month.ToString().PadLeft(2, '0') + "_" +

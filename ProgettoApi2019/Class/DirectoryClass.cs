@@ -5,7 +5,6 @@ namespace ProgettoApi2019
 {
     public static class DirectoryClass
     {
-        
         public static void CreaDirectory()
         {
             ProvaCreaDirectory("o");
@@ -27,23 +26,17 @@ namespace ProgettoApi2019
             catch
 #pragma warning restore RECS0022 // A catch clause that catches System.Exception and has an empty body
             {
-
             }
         }
-
 
         public static string GetOutputPath()
         {
             return DataClass.GetDataOra() + ".txt";
         }
 
-
-
         public static void Save(string v, List<string> r)
         {
             File.WriteAllLines(v, r);
         }
-
-
     }
 }
