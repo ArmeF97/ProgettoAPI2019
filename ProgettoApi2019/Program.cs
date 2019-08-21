@@ -19,7 +19,7 @@ namespace ProgettoApi2019
 
                 int righe = GeneratoreClass.GeneraRighe() + i;
 
-                args = new string[] { "-g", n.ToString(), righe.ToString(), "Y" };
+                args = new string[] { "-g", n.ToString(), righe.ToString(), "Y", "1000","Y" };
                 Main2(args, false);
             }
         }
