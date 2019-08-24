@@ -12,14 +12,14 @@ namespace ProgettoApi2019
                 return;
             }
 
-            int nCicli = RandomClass.RandomInt(7, 10);
+            int nCicli = 1;
             for (int i = 0; i < nCicli; i++)
             {
                 int n = GeneratoreClass.GeneraNumeroTest() + i;
 
                 int righe = GeneratoreClass.GeneraRighe() + i;
 
-                args = new string[] { "-g", n.ToString(), righe.ToString(), "Y", "1000","Y" };
+                args = new string[] { "-g", n.ToString(), righe.ToString(), "N", "100000", "3", "Y", "1000" };
                 Main2(args, false);
             }
         }
